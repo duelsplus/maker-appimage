@@ -234,6 +234,9 @@ export default class MakerAppImage extends MakerBase<MakerAppImageConfig> {
       default: mkSquashFsArgs.push("-comp", compressor);
       // Defaults for `xz` took from AppImageTool:
       case "xz":
+        if (!mkSquashFsArgs.includes("-comp")) {
+          mkSquashFsArgs.push("-comp", "xz");
+        }
         mkSquashFsArgs.push(
           "-Xdict-size", "100%",
           "-b", "16384"
@@ -241,6 +244,9 @@ export default class MakerAppImage extends MakerBase<MakerAppImageConfig> {
         break;
       // Defaults for `zstd` took from AppImageTool:
       case "zstd":
+        if (!mkSquashFsArgs.includes("-comp")) {
+          mkSquashFsArgs.push("-comp", "zstd");
+        }
         mkSquashFsArgs.push(
           "-b", "128K"
         );
