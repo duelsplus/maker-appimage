@@ -1,0 +1,35 @@
+{
+  "name": "@duelsplus/maker-appimage",
+  "type": "module",
+  "version": "5.1.0-duelsplus.2",
+  "description": "AppImage maker implementation for Electron Forge based on ReForged",
+  "main": "dist/main.js",
+  "scripts": {
+    "prepack": "tsc -b",
+    "build": "tsc -b"
+  },
+  "author": "kneesdev",
+  "contributors": [
+    "SpacingBat3 <git@spacingbat3.anonaddy.com> (https://github.com/SpacingBat3)"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "@electron-forge/maker-base": "^6.0.0 || ^7.0.0",
+    "@reforged/maker-types": "^2.0.0",
+    "@spacingbat3/lss": "^1.0.0",
+    "semver": "^7.3.8"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/node": "^22.3.0",
+    "@types/semver": "^7.3.13",
+    "typescript": "^5.0.2"
+  },
+  "types": "./types/main.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=19.0.0 || ^18.11.0"
+  }
+}

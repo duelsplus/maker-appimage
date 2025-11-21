@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@tsconfig/strictest",
+  "compilerOptions": {
+    "composite": true,
+    "incremental": true,
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "target": "ES2022",
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "./types",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "stripInternal": true,
+    "verbatimModuleSyntax": false,
+    "isolatedModules": false
+  },
+  "files": [
+    "src/main.ts",
+    "src/utils.ts",
+    "src/image.ts"
+  ]
+}

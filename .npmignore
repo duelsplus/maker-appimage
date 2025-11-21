@@ -1,0 +1,6 @@
+.*/
+docs/
+test/
+*.json
+*lock*
+*.tsbuildinfo
