@@ -233,10 +233,18 @@ export default class MakerAppImage extends MakerBase<MakerAppImageConfig> {
       //@ts-expect-error falls through
       default: mkSquashFsArgs.push("-comp", compressor);
       // Defaults for `xz` took from AppImageTool:
-      case "xz": mkSquashFsArgs.push(
-        "-Xdict-size", "100%",
-        "-b", "16384"
-      );
+      case "xz":
+        mkSquashFsArgs.push(
+          "-Xdict-size", "100%",
+          "-b", "16384"
+        );
+        break;
+      // Defaults for `zstd` took from AppImageTool:
+      case "zstd":
+        mkSquashFsArgs.push(
+          "-b", "128K"
+        );
+        break;
     }
     d("Queuing 'mksquashfs' task.")
     await new Promise((resolve, reject) => {
