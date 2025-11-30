@@ -94,7 +94,7 @@ export default class MakerAppImage extends MakerBase<MakerAppImageConfig> {
   }: MakerMeta, ...vendorExt: unknown[]): Promise<[AppImagePath:string]> {
     d("Initializing maker metadata.")
     const {
-      actions, categories, compressor, genericName, icon
+      actions, categories, compressor = "zstd", genericName, icon
     } = (this.config.options ?? {});
     let {
       name, bin, productName, runtime
