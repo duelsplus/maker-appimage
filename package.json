@@ -1,7 +1,7 @@
 {
   "name": "@duelsplus/maker-appimage",
   "type": "module",
-  "version": "5.1.0-duelsplus.4",
+  "version": "5.1.0-duelsplus.5",
   "description": "AppImage maker implementation for Electron Forge based on ReForged",
   "main": "dist/main.js",
   "scripts": {
